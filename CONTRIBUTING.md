@@ -38,6 +38,19 @@ Para estar al tanto de las modificaciones que se realicen en el **repositorio or
 ```bash
 git remote add upstream https://github.com/sis-inf/trazo.git
 ```
+Revisa si se agregó de manera exitosa el repositorio como upstream.
+
+```bash
+git remote -v
+# Deberia salirte como resultado, luego de ingresar ese comando, lo siguiente:
+origin https://github.com/TU-USUARIO/pulso.git (fetch)
+origin https://github.com/TU-USUARIO/pulso.git (push)
+upstream https://github.com/sis-inf/pulso.git (fetch)
+upstream https://github.com/sis-inf/puslo.git (push)
+```
+Asegúrate de que te aparezca en **origin** tu nombre de usuario en el apartado ***TU-USUARIO***, mientras que en **upstream** el nombre de ***sis-inf***. 
+
+En caso de existir algún error revisar el apartado [Errores comunes](#errores-comunes).
 
 ### 4. Sincroniza antes de trabajar
 ```bash
@@ -130,3 +143,5 @@ chore: configurar GitHub Actions para CI
 2. Comenta en el issue que quieres trabajarlo
 3. Espera confirmación antes de empezar
 4. Sigue los pasos de este documento
+
+## Errores comunes
