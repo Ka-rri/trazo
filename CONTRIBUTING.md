@@ -106,9 +106,14 @@ git push origin tipo/descripcion-corta
 ```
 
 ### 8. Abre un Pull Request
-- Base: `sis-inf/PROYECTO` → rama `dev`
-- Compare: `TU-USUARIO/PROYECTO` → tu rama
-
+1. Ve a tu Fork en GitHub, aquel repositorio que está en tu cuenta personal.
+2. Click en el banner de color amarillo: "Compare & pull request"
+   En caso de que no aparezca: 
+     * Dirígete a la pestaña `Pull Requests`-> `New Pull Request`
+3. Verifica el  destino del PR
+   - Base repository: `sis-inf/trazo` → base `dev`
+   - Head repository: `TU-USUARIO/trazo` → compare `tu-rama`
+4. Edita la descripción y el título del PR según los cambios que hayas realizado sin olvidarte de agregar al `Closes #` el numero del Issue que realizaste.
 ---
 
 ## Convención de commits
