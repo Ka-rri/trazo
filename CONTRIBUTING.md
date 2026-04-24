@@ -10,6 +10,11 @@ el **Forking Workflow**. Lee este documento antes de empezar.
 ### 1. Haz fork del repositorio
 Botón **Fork** en la esquina superior derecha de GitHub.
 
+Asegúrate que el **owner** sea tu cuenta de GithHub, luego click al botón de color verde: "**Create Fork**".
+Ahora deberías tener un repositorio en tu **cuenta personal** de GitHub llamado **tu_nombre_usuario/nombre_repositorio**. 
+
+*Ejemplo.-* **Atoxny/pulso**
+
 ### 2. Clona tu fork
 ```bash
 git clone https://github.com/TU-USUARIO/PROYECTO.git
