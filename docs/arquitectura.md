@@ -50,3 +50,8 @@ Cada carpeta contiene implementaciones específicas y se expone mediante  `index
 **Consecuencias:** Simplifica la integración y mejora la usabilidad.
 
 ## Flujo de datos
+
+1. El usuario importa el método requerido (ej. `import { biseccion } from 'trazo/sistemas/no-lineales'`).
+2. Define la función y parámetros del problema (ej. intervalo, tolerancia).
+3. El módulo procesa los datos aplicando el algoritmo numérico.
+4. El resultado se devuelve como objeto/valor y puede visualizarse o exportarse.
