@@ -1,4 +1,4 @@
-# Plan de Pruebas - Trazo
+# Plan de Pruebas
 
 ## 1. Objetivo
 Validar la exactitud, estabilidad y correcto funcionamiento de la librería matemática Trazo, asegurando resultados confiables en cálculos numéricos.
@@ -50,4 +50,3 @@ Validar la exactitud, estabilidad y correcto funcionamiento de la librería mate
 | Errores de precisión | Alta | Alta | Validar con resultados conocidos |
 | Entradas inválidas | Media | Media | Validación de datos |
 | Inestabilidad numérica | Media | Alta | Pruebas con casos límite |
-| Inyección de datos o entradas maliciosas | Media | Alta | Validación y sanitización de entradas |
