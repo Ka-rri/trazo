@@ -13,15 +13,15 @@
 | RF-007 | Permitir la configuración manual de la tolerancia (épsilon) y el límite de iteraciones. | Baja | Pendiente |
 | RF-008 | Exportar los resultados de las raíces halladas en formato JSON o CSV. | Media | Pendiente |
 
-## Requerimientos No Funcionales
+### Requerimientos No Funcionales
 
 | ID | Descripción | Categoría | Estado |
 |---|---|---|---|
-| RNF-001 | El tiempo de cálculo para 100 iteraciones no debe exceder los 200ms. | Rendimiento | Pendiente |
-| RNF-002 | El sistema debe manejar una precisión decimal de al menos $10^{-10}$. | Precisión | Pendiente |
-| RNF-003 | El código debe estar documentado siguiendo el estándar de la comunidad. | Mantenibilidad | Pendiente |
-| RNF-004 | La librería debe ser compatible con entornos Linux, Windows y MacOS. | Portabilidad | Pendiente |
-
+| **RNF-001** | **Compatibilidad:** La librería debe ser multiplataforma, funcionando correctamente en Windows 10/11 y distribuciones Linux (Ubuntu/Debian) con Python 3.10+. | Compatibilidad | Pendiente |
+| **RNF-002** | **Precisión Numérica:** Todos los cálculos de raíces deben soportar una precisión mínima de $10^{-10}$ utilizando tipos de datos `float64`. | Precisión | Pendiente |
+| **RNF-003** | **Rendimiento:** El tiempo de respuesta para encontrar una raíz con 500 iteraciones no debe superar los 150 milisegundos en hardware estándar. | Rendimiento | Pendiente |
+| **RNF-004** | **Dependencias:** La librería solo puede depender de `NumPy` para operaciones matemáticas pesadas, evitando dependencias externas innecesarias para mantenerla ligera. | Restricción | Pendiente |
+| **RNF-005** | **Mantenibilidad:** El código debe seguir las guías de estilo PEP 8 y estar documentado con Docstrings para facilitar su uso por otros desarrolladores. | Calidad | Pendiente |
 ## Requerimientos de Sistema
 
 | ID | Descripción |
