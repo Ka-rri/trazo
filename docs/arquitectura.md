@@ -40,8 +40,13 @@ Cada carpeta contiene implementaciones específicas y se expone mediante  `index
 ## Decisiones de diseño
 
 ### Decisión 1
-**Contexto:**
-**Decisión:**
-**Consecuencias:**
+**Contexto:** Se necesitaba modularidad para cubrir distintos métodos numéricos.
+**Decisión:** Separar la librería en carpetas/módulos (`sistemas, interpolacion, integracion`).
+**Consecuencias:** Facilita mantenimiento, pruebas unitarias y escalabilidad.
+
+### Decisión 2 
+**Contexto:** Los usuarios deben poder importar funciones fácilmente.
+**Decisión:** Exportar funciones principales desde `index.js` con sintaxis ES6 (`export { biseccion }`).
+**Consecuencias:** Simplifica la integración y mejora la usabilidad.
 
 ## Flujo de datos
