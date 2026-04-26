@@ -18,7 +18,15 @@ Su arquitectura es modular y extensible, lo que permite a estudiantes y profesio
 - **Core (src/index.js):** Punto de entrada que exporta los métodos principales y coordina los módulos.
 
 ## Diagrama de arquitectura
-[Insertar diagrama]
+
+Trazo (Core: index.js)
+ ├── sistemas/
+ │    ├── lineales/
+ │    └── no-lineales/
+ ├── interpolacion/
+ └── integracion/  
+
+Cada carpeta contiene implementaciones específicas y se expone mediante  `index.js` para facilitar la importación en proyectos externos.
 
 ## Tecnologías utilizadas
 
