@@ -32,7 +32,10 @@ Cada carpeta contiene implementaciones específicas y se expone mediante  `index
 
 | Componente | Tecnología | Versión | Justificación |
 |---|---|---|---|
-| | | | |
+| Núcleo | JavaScript (ES6+) | Más reciente | Lenguaje principal, estándar para librerías web y Node.js |
+| Dependencias | npm | Más reciente | Distribución y gestión de paquetes |
+| Matemáticas | Algoritmos propios | N/A | Implementeación didáctica de métodos numéricos |
+| Documentación | Markdown | N/A | Claridad y trazabilidad en la explicación |
 
 ## Decisiones de diseño
 
