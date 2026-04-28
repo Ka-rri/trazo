@@ -1,57 +1,53 @@
-# Arquitectura del Sistema
+
+# Arquitectura de la librería Trazo
 
 ## Visión general
 
-**Trazo** es una librería de **métodos numéricos en JavaScript (ES6+)** diseñada para resolver problemas matemáticos mediante algoritmos de aproximación.
-Su arquitectura es modular y extensible, lo que permite a estudiantes y profesionales importar únicamente los métodos que necesitan sin cargar toda la librería.
+**Trazo** es una librería de métodos numéricos en JavaScript (ES6+) diseñada para resolver problemas matemáticos mediante algoritmos de aproximación. Su arquitectura es modular y extensible.
 
 ## Componentes principales
 
-- **Sistemas de ecuaciones lineales:** Eliminación de Gauss, Gauss-Jordan, descomposición LU, Jacobi, Gauss-Seidel.
-
-- **Sistemas de ecuaciones no lineales:** Bisección, secante, Newton-Raphson, falsa posición, punto fijo.
-
+- **Sistemas de ecuaciones lineales:** Métodos como Gauss, Gauss-Jordan, LU, Jacobi y Gauss-Seidel.
+- **Sistemas no lineales:** Bisección, secante, Newton-Raphson, falsa posición.
 - **Interpolación:** Lagrange y Newton.
-
-- **Integración numérica:** Regla del trapecio, Simpson (1/3 y 3/8), cuadratura de Gauss.  
-
-- **Core (src/index.js):** Punto de entrada que exporta los métodos principales y coordina los módulos.
+- **Integración numérica:** Trapecio, Simpson, cuadratura de Gauss.
+- **Core:** Punto de entrada (`index.js`) que organiza los módulos.
 
 ## Diagrama de arquitectura
 
-Trazo (Core: index.js)
- ├── sistemas/
- │    ├── lineales/
- │    └── no-lineales/
- ├── interpolacion/
- └── integracion/  
 
-Cada carpeta contiene implementaciones específicas y se expone mediante  `index.js` para facilitar la importación en proyectos externos.
+trazo/
+│
+├── sistemas/
+│ ├── lineales/
+│ └── no-lineales/
+├── interpolacion/
+└── integracion/
+
 
 ## Tecnologías utilizadas
 
-| Componente | Tecnología | Versión | Justificación |
-|---|---|---|---|
-| Núcleo | JavaScript (ES6+) | Más reciente | Lenguaje principal, estándar para librerías web y Node.js |
-| Dependencias | npm | Más reciente | Distribución y gestión de paquetes |
-| Matemáticas | Algoritmos propios | N/A | Implementeación didáctica de métodos numéricos |
-| Documentación | Markdown | N/A | Claridad y trazabilidad en la explicación |
+| Componente | Tecnología | Justificación |
+|-----------|------------|--------------|
+| Núcleo | JavaScript (ES6+) | Lenguaje principal |
+| Dependencias | npm | Gestión de paquetes |
+| Documentación | Markdown | Claridad |
 
 ## Decisiones de diseño
 
 ### Decisión 1
-**Contexto:** Se necesitaba modularidad para cubrir distintos métodos numéricos.
-**Decisión:** Separar la librería en carpetas/módulos (`sistemas, interpolacion, integracion`).
-**Consecuencias:** Facilita mantenimiento, pruebas unitarias y escalabilidad.
+**Contexto:** Se requiere modularidad.  
+**Decisión:** Separar la librería en módulos independientes.  
+**Consecuencias:** Facilita mantenimiento y escalabilidad.
 
-### Decisión 2 
-**Contexto:** Los usuarios deben poder importar funciones fácilmente.
-**Decisión:** Exportar funciones principales desde `index.js` con sintaxis ES6 (`export { biseccion }`).
-**Consecuencias:** Simplifica la integración y mejora la usabilidad.
+### Decisión 2
+**Contexto:** Facilidad de uso.  
+**Decisión:** Exportar funciones desde `index.js`.  
+**Consecuencias:** Uso sencillo en otros proyectos.
 
 ## Flujo de datos
 
-1. El usuario importa el método requerido (ej. `import { biseccion } from 'trazo/sistemas/no-lineales'`).
-2. Define la función y parámetros del problema (ej. intervalo, tolerancia).
-3. El módulo procesa los datos aplicando el algoritmo numérico.
-4. El resultado se devuelve como objeto/valor y puede visualizarse o exportarse.
+1. El usuario importa un método.
+2. Define parámetros.
+3. El sistema ejecuta el algoritmo.
+4. Retorna resultados.
