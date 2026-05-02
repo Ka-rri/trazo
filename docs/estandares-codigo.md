@@ -7,7 +7,7 @@ Esta guía define convenciones para escribir código JavaScript limpio, consiste
 
 - Usar `camelCase`.
 - Los nombres deben ser descriptivos y claros.
-- Evitar abreviaciones innecesarias.
+-Usar nombres en inglés para mantener consistencia en el proyecto.
 
 ### ✅ Ejemplos:
 
@@ -62,10 +62,7 @@ import { sum } from './math-utils.js';
 ```
 ### 🎯 ¿Por qué esto es importante?
 
-- Es el estándar moderno de JavaScript.  
-- Mejor soporte en frontend y backend. 
-- Más claro y estructurado.
-- Compatible con herramientas actuales.
+El uso de inglés en el código permite mayor consistencia, facilita la colaboración entre desarrolladores y sigue estándares internacionales.
 
 ## 📐 4. Indentación y formato
 
@@ -194,4 +191,4 @@ if (product.isAvailable()) {
 - JSDoc → documentación
 - `===` → comparaciones estrictas
 - Consistencia > preferencias personales
-- Código → Inglés (recomendado)
+-Código → Inglés (obligatorio)
