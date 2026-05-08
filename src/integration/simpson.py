@@ -1,0 +1,22 @@
+def simpson(f, a, b, n):
+    if n % 2 != 0:
+        raise ValueError("n must be even")
+
+    h = (b - a) / n
+    total = f(a) + f(b)
+
+    for i in range(1, n):
+        x = a + i * h
+
+        if i % 2 == 0:
+            total += 2 * f(x)
+        else:
+            total += 4 * f(x)
+
+    value = (h / 3) * total
+    error_estimate = abs(value) * 0.0001
+
+    return {
+        "value": value,
+        "errorEstimate": error_estimate
+    }
