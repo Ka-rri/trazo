@@ -1,0 +1,96 @@
+# Guía de instalación de Trazo
+
+## Descripción
+
+Trazo es una librería de métodos numéricos.
+
+---
+
+## Requisitos previos
+
+Antes de utilizar la librería, asegúrese de tener instalado:
+
+- Node.js 18 o superior
+- npm 9 o superior
+- Git
+
+Verificar instalación:
+
+```bash
+node -v
+npm -v
+git --version
+```
+
+---
+
+## Clonar el repositorio
+
+Ejecute el siguiente comando en la terminal:
+
+```bash
+git clone https://github.com/sis-inf/trazo.git
+```
+
+Luego ingrese al proyecto:
+
+```bash
+cd trazo
+```
+
+---
+
+## Instalar dependencias
+
+Instale las dependencias del proyecto:
+
+```bash
+npm install
+```
+
+---
+
+## Uso de la librería en un proyecto
+
+Puede importar las funciones de la librería desde la carpeta `src`.
+
+Ejemplo:
+
+```javascript
+import { simpson } from "./src/integration/simpson.js";
+```
+
+---
+
+## Ejemplo mínimo de uso
+
+```javascript
+import { simpson } from "./src/integration/simpson.js";
+
+function f(x) {
+    return x * x;
+}
+
+const resultado = simpson(f, 0, 2, 4);
+
+console.log(resultado);
+```
+
+Salida esperada:
+
+```javascript
+{
+  value: 2.6666666666666665,
+  errorEstimate: 0.00390625
+}
+```
+
+---
+
+## Ejecutar el proyecto
+
+Para ejecutar pruebas o scripts del proyecto:
+
+```bash
+npm test
+```

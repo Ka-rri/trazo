@@ -7,19 +7,19 @@ y este proyecto sigue el versionado [SemVer](https://semver.org/lang/es/).
 
 ## [Unreleased]
 
-### Added
+### Agregado
 - Estructura inicial del proyecto Trazo
 - Organización de carpetas bajo la arquitectura definida
 - Documentación inicial (README, guías de contribución, estándares de código, etc.)
 
-### Changed
+### Cambiado
 - N/A
 
-### Fixed
+### Corregido
 - N/A
 
 ## [0.1.0] - 2026-04-19
 
-### Added
+### Agregado
 - Inicio del proyecto Trazo
 - Creación del repositorio
