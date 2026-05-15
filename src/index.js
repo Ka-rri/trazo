@@ -1,6 +1,54 @@
-export * from './core/index.js';
-export * from './no-lineales/index.js';
-export * from './lineales/index.js';
-export * from './integracion/index.js';
-export * from './interpolacion/index.js';
-export *from './utils/index.js';
+/**
+ * Re-exporta la función pública para cálculo de derivadas.
+ */
+export { derivative } from './calculus/derivative.js';
+
+/**
+ * Re-exporta el método público de integración Simpson 1/3.
+ */
+export { simpson13 } from './integracion/simpson-13.js';
+
+/**
+ * Re-exporta el método público de integración Simpson.
+ */
+export { simpson } from './integration/simpson.js';
+
+/**
+ * Re-exporta la función pública para interpolación de Lagrange.
+ */
+export { lagrange } from './interpolacion/lagrange.js';
+
+/**
+ * Re-exporta la función pública para interpolación lineal.
+ */
+export { linearInterpolation } from './interpolacion/linear.js';
+
+/**
+ * Re-exporta el método público de eliminación de Gauss.
+ */
+export { gauss } from './lineales/gauss.js';
+
+/**
+ * Re-exporta el método público de Jacobi.
+ */
+export { jacobi } from './lineales/jacobi.js';
+
+/**
+ * Re-exporta la función pública para determinantes de matrices 2x2.
+ */
+export { det2x2 } from './linearAlgebra/determinant.js';
+
+/**
+ * Re-exporta la función pública para determinantes de matrices 3x3.
+ */
+export { det3x3 } from './linearAlgebra/determinant.js';
+
+/**
+ * Re-exporta la función pública para evaluación de polinomios.
+ */
+export { polyEval } from './math/polyEval.js';
+
+/**
+ * Re-exporta el método público de Newton-Raphson.
+ */
+export { newtonRaphson } from './no-lineales/newton-raphson.js';
