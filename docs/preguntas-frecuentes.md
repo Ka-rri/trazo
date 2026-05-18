@@ -1,27 +1,23 @@
-# Preguntas frecuentes sobre la librería Trazo
+# Preguntas Frecuentes (FAQ) - Trazo
 
 ## ¿Qué es Trazo?
 
-Trazo es una librería ligera para el procesamiento y análisis de trazos manuscritos. Permite capturar, normalizar y extraer características de dibujos o escritura a mano en aplicaciones web y móviles.
+Trazo es una librería de métodos numéricos en JavaScript diseñada para resolver problemas matemáticos mediante métodos de aproximación. Está pensada para estudiantes, ingenieros y profesionales que necesitan realizar cálculos numéricos sin tener que implementar los algoritmos desde cero.
 
-## ¿Qué métodos principales ofrece Trazo?
+## ¿Qué métodos numéricos están disponibles?
 
-La librería incluye métodos como `capturar()`, `normalizar()`, `suavizar()`, `calcularLongitud()`, `obtenerPuntosClave()` y `exportarJSON()`. También dispone de utilidades para detectar ángulos, velocidad y aceleración del trazo.
+Trazo actualmente incluye los siguientes métodos:
 
-## ¿Cómo integro Trazo en mi proyecto?
+- **Sistemas de ecuaciones lineales:** Eliminación de Gauss, Gauss-Jordan, Descomposición LU, Jacobi, Gauss-Seidel
+- **Sistemas de ecuaciones no lineales:** Bisección, Secante, Newton-Raphson, Falsa Posición, Punto Fijo
+- **Interpolación:** Lagrange, Newton
+- **Integración numérica:** Regla del Trapecio, Simpson (1/3 y 3/8), Cuadratura de Gauss
 
-Puedes integrar Trazo instalándolo vía npm con `npm install trazo` o incluyendo el script desde CDN:  
-`<script src="https://cdn.ejemplo.com/trazo.min.js"></script>`.  
-Luego, inicializa un nuevo objeto `Trazo()` y usa sus métodos según la documentación oficial.
+> **Nota:** La librería está en desarrollo activo y se irán agregando más métodos.
 
-## ¿Qué precisión tiene Trazo en el reconocimiento de trazos?
+## ¿Cómo instalo e integro Trazo en mi proyecto?
 
-La precisión depende de la calidad del dispositivo de entrada (pantalla táctil, lápiz óptico, ratón). En condiciones óptimas, Trazo alcanza una precisión submilimétrica en dispositivos modernos. Para escritura manuscrita, la tasa de acierto en caracteres aislados supera el 96%.
-
-## ¿Cómo puedo reportar un error o sugerir una mejora?
-
-Puedes reportar errores abriendo un issue en el repositorio oficial de GitHub (https://github.com/trazo/trazo/issues). Incluye la versión de la librería, el navegador/sistema operativo, un ejemplo mínimo reproducible y los pasos para replicar el fallo.
-
-## ¿Trazo es compatible con React, Vue o Angular?
-
-Sí, Trazo es agnóstico del framework. Puedes usarlo con React, Vue, Angular o vanilla JS. Solo necesitas una referencia al elemento DOM donde se capturará el trazo y llamar a los métodos de la librería dentro de los ciclos de vida apropiados.
+```bash
+git clone https://github.com/sis-inf/trazo.git
+cd trazo
+npm install
