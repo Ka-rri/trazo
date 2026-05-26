@@ -36,12 +36,12 @@ export { jacobi } from './lineales/jacobi.js';
 /**
  * Re-exporta la función pública para determinantes de matrices 2x2.
  */
-export { det2x2 } from './linearAlgebra/determinant.js';
+export { det2x2 } from './lineales/determinant.js';
 
 /**
  * Re-exporta la función pública para determinantes de matrices 3x3.
  */
-export { det3x3 } from './linearAlgebra/determinant.js';
+export { det3x3 } from './lineales/determinant.js';
 
 /**
  * Re-exporta la función pública para evaluación de polinomios.
