@@ -137,7 +137,21 @@ docs: agregar guía de instalación en Windows
 test: agregar pruebas unitarias para módulo de disco
 chore: configurar GitHub Actions para CI
 
----
+
+## Nomenclatura de directorios y archivos
+
+Este proyecto usa español como idioma estándar para la estructura de carpetas. Crear directorios con nombres en inglés (como integration, linearAlgebra o math) es un error frecuente que será rechazado en el PR.
+
+**Directorios canónicos bajo src/**
+
+| Directorio | Contenido |
+|---|---|
+| src/lineales/ | Métodos para sistemas de ecuaciones lineales |
+| src/no-lineales/ | Métodos para sistemas de ecuaciones no lineales |
+| src/interpolacion/ | Métodos de interpolación |
+| src/integracion/ | Métodos de integración numérica |
+| src/utils/ | Utilidades y validaciones compartidas |
+
 
 ## Reglas importantes
 
@@ -162,6 +176,16 @@ chore: configurar GitHub Actions para CI
 | `test/*` | Pruebas |
 | `chore/*` | Configuración |
 
+
+### Ejemplos 
+
+✅ Correcto              ❌ Incorrecto
+src/lineales/            src/linearAlgebra/
+src/no-lineales/         src/nonLinear/
+src/interpolacion/       src/interpolation/
+src/integracion/         src/integration/
+src/utils/               src/helpers/
+
 ---
 
 ## ¿No sabes por dónde empezar?
@@ -172,3 +196,38 @@ chore: configurar GitHub Actions para CI
 4. Sigue los pasos de este documento
 
 ## Errores comunes
+
+**1. Crear directorios con nombres en inglés**
+
+**Problema:** Se crea una carpeta como src/integration/, src/linearAlgebra/ o src/math/.
+**Solucion:** Usa siempre los nombres en español definidos en la sección Nomenclatura de directorios y archivos.
+
+ ✅ src/integracion/
+ ❌ src/integration/
+
+**2. Hacer push directo a main o dev**
+
+**Problema:** Se abre un Pull Request sin vincular el issue correspondiente, lo que dificulta el seguimiento del proyecto
+**Solucion:** Siempre incluye Closes #N en la descripción del PR, donde N es el número del issue que resolviste.
+
+  ✅ Closes #153
+
+  **3. No sincronizar con upstream antes de empezar**
+
+  **Problema:** Se trabaja sobre una versión desactualizada del repositorio, lo que genera conflictos al abrir el PR.
+  **Solucion:** Ejecuta siempre estos comandos antes de crear tu rama de trabajo.
+
+    git checkout dev
+    git pull upstream dev
+
+**4. Nombre de rama incorrecto**
+  
+  **Problema:** Se usa un nombre de rama que no sigue la convención del proyecto (ej: mi-rama, cambios, arreglo).
+  **Solucion:** El nombre de la rama siempre está indicado en el issue. Sigue el formato tipo/descripcion-corta.
+
+  ✅ feat/metodo-jacobi
+  ✅ fix/error-pivote-nulo
+  ✅ docs/guia-instalacion
+  ❌ mi-rama
+  ❌ cambios 
+
