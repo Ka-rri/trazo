@@ -1,34 +1,19 @@
- // METODO DE BISECCION
+import {
+  validarFuncion,
+  validarNumero,
+} from "../utils/validaciones.js";
+// METODO DE BISECCION
  
  function biseccion({ f, a, b, tolerancia = 1e-6, maxIter = 100 }) {
- 
-  if (typeof f !== "function") {
-    throw new TypeError(
-      `Trazo.biseccion: 'f' debe ser una función. Se recibió: ${typeof f}`
-    );
-  }
- 
-  if (typeof a !== "number" || isNaN(a)) {
-    throw new TypeError(
-      `Trazo.biseccion: 'a' debe ser un número válido. Se recibió: ${a}`
-    );
-  }
- 
-  if (typeof b !== "number" || isNaN(b)) {
-    throw new TypeError(
-      `Trazo.biseccion: 'b' debe ser un número válido. Se recibió: ${b}`
-    );
-  }
+
+  validarFuncion(f, "f");
+  validarNumero(a, "a");
+  validarNumero(b, "b");
+  validarNumero(tolerancia, "tolerancia");
  
   if (a >= b) {
     throw new Error(
       `Trazo.biseccion: 'a' (${a}) debe ser menor que 'b' (${b}).`
-    );
-  }
- 
-  if (typeof tolerancia !== "number" || tolerancia <= 0) {
-    throw new TypeError(
-      "Trazo.biseccion: 'tolerancia' debe ser un número positivo."
     );
   }
  
