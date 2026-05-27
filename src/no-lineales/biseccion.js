@@ -40,28 +40,22 @@ function biseccion({ f, a, b, tolerancia = 1e-6, maxIter = 100 }) {
   let izq = a;
   let der = b;
   let c = izq;
-
   const iteraciones = [];
 
-  // Indica si el metodo convergio o no
+  // Indica si el metodo logro converger antes de alcanzar maxIter
   let convergencia = false;
 
   for (let iter = 0; iter < maxIter; iter++) {
-
     c = (izq + der) / 2;
-
-    // Guarda todas las iteraciones realizadas
     iteraciones.push(c);
 
     const fc = f(c);
 
-    // Verifica convergencia
     if (Math.abs(fc) < tolerancia) {
       convergencia = true;
       break;
     }
 
-    // Actualiza intervalo
     if (f(izq) * fc < 0) {
       der = c;
     } else {
@@ -69,7 +63,6 @@ function biseccion({ f, a, b, tolerancia = 1e-6, maxIter = 100 }) {
     }
   }
 
-  // Retorna resultado final
   return {
     resultado: c,
     iteraciones,
