@@ -46,7 +46,7 @@ export { det3x3 } from './lineales/determinant.js';
 /**
  * Re-exporta la función pública para evaluación de polinomios.
  */
-export { polyEval } from './math/polyEval.js';
+export { polyEval } from './interpolacion/polyEval.js';
 
 /**
  * Re-exporta el método público de Newton-Raphson.
