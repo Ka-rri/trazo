@@ -55,7 +55,6 @@ function biseccion({ f, a, b, tolerancia = 1e-6, maxIter = 100 }) {
       convergencia = true;
       break;
     }
-
     if (f(izq) * fc < 0) {
       der = c;
     } else {
@@ -64,9 +63,16 @@ function biseccion({ f, a, b, tolerancia = 1e-6, maxIter = 100 }) {
   }
 
   return {
-    resultado: c,
+    raiz: c,
     iteraciones,
     convergencia,
+    error: Math.abs(f(c)),
+    meta: {
+      metodo: "biseccion",
+      intervalo: [a, b],
+      tolerancia,
+      maxIter,    
+    },
   };
 }
 
