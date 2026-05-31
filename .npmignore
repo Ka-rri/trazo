@@ -1,0 +1,26 @@
+# Git
+.git/
+.github/
+
+# Docs
+docs/
+README.md
+CONTRIBUTING.md
+CHANGELOG.md
+
+# Tests
+test/
+tests/
+
+# Config
+.eslintrc
+.eslintrc.js
+.eslintrc.json
+eslint.config.js
+rollup.config.mjs
+
+# Data
+data/
+
+# Security
+security/
