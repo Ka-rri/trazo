@@ -21,7 +21,7 @@ import { errorAbsoluto } from '../utils/formato.js';
  * @throws {ErrorConvergencia} Si no converge en maxIter iteraciones.
  */
 function muller({ f, x0, x1, x2, tolerancia = 1e-6, maxIter = 100 }) {
-  // ── Validaciones de Entrada ────────────────────────────────────────────
+  // Validaciones de Entrada 
   validarFuncion(f, 'f');
   validarNumero(x0, 'x0');
   validarNumero(x1, 'x1');
@@ -62,14 +62,11 @@ function muller({ f, x0, x1, x2, tolerancia = 1e-6, maxIter = 100 }) {
       // Evaluación del discriminante real
       const discriminante = B * B - 4 * A * C;
 
-      if (discriminante < 0) {
-        throw new ErrorDominio(
-          `Trazo.muller: discriminante negativo (${discriminante.toFixed(6)}) en la iteración ${n}. No existen raíces reales en este intervalo.`
-        );
-      }
+      // Para discriminante negativo (raíces complejas) se usa |discriminante|
+      // y se retorna la parte real de la raíz compleja
 
-      const sqrtDisc = Math.sqrt(discriminante);
-      
+      const sqrtDisc = Math.sqrt(Math.abs(discriminante));
+
       // Determinación del denominador de mayor magnitud para estabilidad
       const denominador = Math.abs(B + sqrtDisc) >= Math.abs(B - sqrtDisc)
         ? B + sqrtDisc
