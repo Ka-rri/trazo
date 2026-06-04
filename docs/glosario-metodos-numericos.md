@@ -1,31 +1,20 @@
 # Glosario de Métodos Numéricos
 
-Referencia de términos técnicos usados en métodos numéricos, explicados para estudiantes sin contexto matemático previo.
-
----
-
 | Término | Definición |
 |---|---|
-| Condicionamiento | Propiedad de un sistema que indica qué tan sensible es su solución a pequeños cambios en los datos de entrada. Un sistema "mal condicionado" produce grandes errores en la solución aunque los datos de entrada solo tengan errores pequeños. |
-| Convergencia | Propiedad de un método iterativo donde las aproximaciones sucesivas se acercan cada vez más a la solución real. Se dice que el método "convergió" cuando la diferencia entre dos iteraciones consecutivas es menor que la tolerancia definida. |
-| Criterio de parada | Condición que le indica al algoritmo cuándo dejar de iterar. Generalmente es que el error sea menor que la tolerancia, o que se haya alcanzado el número máximo de iteraciones permitidas. |
-| Descomposición LU | Técnica que factoriza una matriz `A` en el producto de dos matrices: `L` (triangular inferior) y `U` (triangular superior), tal que `A = L·U`. Permite resolver el sistema original de forma más eficiente, especialmente cuando se necesita resolver varias veces con la misma matriz. |
-| Diagonal dominante | Condición de una matriz donde, en cada fila, el valor absoluto del elemento de la diagonal principal es mayor que la suma de los valores absolutos del resto de elementos de esa fila. Garantiza la convergencia de métodos iterativos como Jacobi y Gauss-Seidel. |
-| Diferencia dividida | Cociente que aproxima la tasa de cambio de una función usando dos o más puntos conocidos. Se usa como bloque base para construir el polinomio interpolante de Newton. |
-| Divergencia | Lo opuesto a la convergencia: cuando las aproximaciones de un método iterativo se alejan cada vez más de la solución en lugar de acercarse. Indica que el método no es adecuado para ese problema o punto de partida. |
-| EDO (Ecuación Diferencial Ordinaria) | Ecuación que relaciona una función con sus derivadas respecto a una sola variable. Aparece frecuentemente en física e ingeniería para modelar fenómenos que cambian en el tiempo, como el movimiento de un objeto o el crecimiento de una población. |
-| Error de redondeo | Error introducido al representar números reales con una cantidad finita de decimales en la computadora. Por ejemplo, `1/3` no puede representarse exactamente en binario, por lo que se guarda un valor ligeramente diferente. Se acumula con cada operación aritmética. |
-| Error de truncación | Error producido al cortar o aproximar un proceso matemático infinito (como una serie o una derivada) con un número finito de pasos. Por ejemplo, aproximar una derivada con solo dos puntos en lugar de calcularla exactamente. |
-| Extrapolación | Estimar un valor fuera del rango de los datos conocidos, extendiendo el comportamiento observado más allá de los límites disponibles. Es más arriesgada que la interpolación porque no hay datos que validen la estimación. |
-| Interpolación | Estimar el valor de una función en un punto desconocido usando puntos conocidos que lo rodean. Por ejemplo, si se conoce la temperatura a las 8:00 y a las 10:00, interpolar permite estimar la temperatura a las 9:00. |
-| Iteración | Cada repetición de un ciclo de cálculo en un algoritmo. En métodos iterativos, cada iteración produce una nueva aproximación de la solución, generalmente más cercana a la respuesta real que la anterior. |
-| Número de condición | Valor numérico que mide el condicionamiento de una matriz. Un número de condición cercano a 1 indica un sistema bien condicionado; valores muy grandes (como 10⁶ o más) indican un sistema mal condicionado donde los errores de redondeo pueden dominar la solución. |
-| Pivote | Elemento de la diagonal que se usa como divisor durante la eliminación gaussiana. Si un pivote es cero o muy pequeño, el cálculo puede fallar o volverse numéricamente inestable. El pivoteo es la técnica de intercambiar filas para colocar el mejor pivote disponible. |
-| Polinomio interpolante | Polinomio que pasa exactamente por un conjunto de puntos conocidos. Se usa para aproximar funciones a partir de datos discretos. Los métodos de Lagrange y Newton son las formas más comunes de construirlo. |
-| Raíz | Valor de `x` donde una función `f(x)` vale cero, es decir, donde la curva cruza el eje horizontal. Encontrar raíces es uno de los problemas centrales de los métodos numéricos. Métodos como bisección, Newton-Raphson y secante están diseñados para esto. |
-| Régula falsi | Método para encontrar raíces que, similar a la bisección, trabaja sobre un intervalo `[a, b]` donde la función cambia de signo. En lugar de tomar el punto medio, traza una línea recta entre `f(a)` y `f(b)` y usa donde esa línea cruza el eje como nueva aproximación. Suele converger más rápido que bisección. |
-| Solución aproximada | Resultado de un método numérico que no es el valor exacto, sino uno suficientemente cercano dentro de un margen de error aceptable (la tolerancia). La mayoría de los métodos numéricos producen soluciones aproximadas, no exactas. |
-| Spline | Función construida uniendo varios polinomios de bajo grado en distintos subintervalos, de manera que las uniones sean suaves. Los splines cúbicos son los más comunes y garantizan que la curva sea continua y sin esquinas en los puntos de unión. Son preferibles al polinomio interpolante cuando hay muchos puntos de datos. |
-| Sustitución hacia atrás | Técnica para resolver un sistema triangular superior comenzando desde la última ecuación (que tiene una sola incógnita) y substituyendo hacia arriba. Es el paso final de la eliminación de Gauss. |
-| Sustitución hacia adelante | Técnica para resolver un sistema triangular inferior comenzando desde la primera ecuación y avanzando hacia abajo. Se usa en la descomposición LU para resolver `L·y = b`. |
-| Tolerancia | Valor positivo pequeño que define cuándo una aproximación es "suficientemente buena". El algoritmo se detiene cuando el error estimado es menor que la tolerancia. Valores comunes son `1e-6` o `1e-9` dependiendo de la precisión requerida. |
+| Algoritmo | Secuencia de pasos lógicos y finitos para resolver un cálculo o problema ya sea matemático o computacional. |
+| Aproximación | Valor cercano al resultado matemático exacto, usado cuando el cálculo perfecto es muy complejo o imposible. |
+| Bisección | Método para encontrar raíces que divide un intervalo a la mitad repetidamente hasta acercarse a la solución. |
+| Convergencia | Cuando las respuestas de un algoritmo se acercan cada vez más a la solución correcta. |
+| Diferencia dividida | Cociente que aproxima la tasa de cambio de una función usando dos o más puntos conocidos; base del polinomio interpolante de Newton. |
+| EDO (Ecuación Diferencial Ordinaria) | Ecuación que relaciona una función con sus derivadas respecto a una sola variable. |
+| Error absoluto | La diferencia directa (resta) entre el valor matemático real y nuestro valor aproximado. |
+| Error de redondeo | Error introducido al representar números reales con una cantidad finita de dígitos decimales en la computadora. |
+| Error de truncación | Error producido al cortar o aproximar un proceso matemático infinito con un número finito de pasos. |
+| Extrapolación | Técnica para calcular o estimar un valor que está fuera del rango de nuestros datos conocidos. |
+| Interpolación | Estimar el valor de una función en un punto desconocido usando puntos conocidos que lo rodean. |
+| Iteración | Cada repetición de un ciclo de cálculo en un algoritmo; en métodos iterativos, cada iteración produce una nueva aproximación más cercana a la solución. |
+| Raíz | Valor de `x` donde una función `f(x)` vale cero; encontrar raíces es uno de los problemas centrales de los métodos numéricos. |
+| Régula falsi | Método para encontrar raíces trabajando sobre un intervalo donde la función cambia de signo, usando una línea recta para aproximar la raíz. |
+| Spline | Función construida uniendo varios polinomios de bajo grado en distintos subintervalos, de manera que las uniones sean suaves. |
+| Tolerancia | Valor positivo pequeño que define cuándo una aproximación es "suficientemente buena"; el algoritmo se detiene cuando el error estimado es menor que la tolerancia. |
