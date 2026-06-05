@@ -15,6 +15,10 @@ describe("checkConvergence", () => {
 
     expect(resultado.converged).toBe(false);
   });
+
+  test("tolerancia <= 0 lanza error", () => {
+    expect(() => checkConvergence(1.0, 1.0, 0)).toThrow();
+  });
 });
 
 describe("ConvergenceHistory", () => {
