@@ -1,12 +1,16 @@
-import {
+const {
   validarNumero,
   validarFuncion,
   validarTolerancia,
-} from "../../../src/utils/validaciones.js";
+} = require("../../../../src/utils/validaciones");
 
 describe("validarNumero", () => {
   test("acepta un número válido", () => {
     expect(() => validarNumero(10, "x")).not.toThrow();
+  });
+
+  test("acepta un número decimal válido", () => {
+    expect(() => validarNumero(3.14, "x")).not.toThrow();
   });
 
   test("lanza error con texto", () => {
@@ -26,7 +30,6 @@ describe("validarFuncion", () => {
   test("lanza error con null", () => {
     expect(() => validarFuncion(null, "f")).toThrow();
   });
-
 });
 
 describe("validarTolerancia", () => {
