@@ -7,7 +7,7 @@ El proyecto Trazo utiliza la convención *Conventional Commits* para mantener un
 ## Formato
 
 text
-tipo(ambito): descripción breve
+tipo(ambito): descripción breve 
 
 
 ### Ejemplos
