@@ -224,3 +224,29 @@ La convergencia no está garantizada, pero puede ocurrir de todas formas dependi
 | Cholesky | Directo | ~O(n³/2) | Muy eficiente | Simétrica definida positiva (SPD) | Pendiente |
 | Jacobi | Iterativo | O(n²) por iteración | Requiere reiniciar | Diagonal dominante recomendada | Implementado |
 | Gauss-Seidel | Iterativo | O(n²) por iteración | Requiere reiniciar | Diagonal dominante recomendada |Pendiente |
+---
+
+## Recomendaciones prácticas
+
+Antes de resolver un sistema de ecuaciones lineales se recomienda:
+
+1. Verificar que la matriz no sea singular.
+2. Revisar si existe diagonal dominante cuando se utilicen métodos iterativos.
+3. Utilizar LU cuando se resolverán varios sistemas con la misma matriz.
+4. Aprovechar Cholesky cuando la matriz sea simétrica definida positiva.
+5. Comparar los resultados obtenidos con diferentes métodos cuando sea posible.
+
+---
+
+## Aplicaciones
+
+Los sistemas de ecuaciones lineales aparecen en numerosas áreas de la ciencia e ingeniería:
+
+- Análisis de circuitos eléctricos.
+- Modelado de estructuras mecánicas.
+- Simulación de fenómenos físicos.
+- Ajuste de datos mediante regresión.
+- Problemas de optimización.
+- Computación gráfica y procesamiento de imágenes.
+
+La elección adecuada del método puede reducir significativamente el tiempo de cálculo y mejorar la estabilidad numérica de la solución.
