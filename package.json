@@ -10,6 +10,7 @@
     "build": "rollup -c",
     "test": "jest --config=\"{\\\"testMatch\\\":[\\\"**/*.test.js\\\"]}\"",
     "test:watch": "jest --watch tests",
+    "test:cov": "jest --coverage",
     "lint": "eslint src tests",
     "format": "prettier --write src tests"
   },
