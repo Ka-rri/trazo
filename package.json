@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node src/index.js",
     "build": "rollup -c",
-    "test": "jest tests",
+    "test": "jest --config=\"{\\\"testMatch\\\":[\\\"**/*.test.js\\\"]}\"",
     "test:watch": "jest --watch tests",
     "lint": "eslint src tests",
     "format": "prettier --write src tests"
@@ -20,4 +20,3 @@
     "rollup": "^4.0.0"
   }
 }
-
